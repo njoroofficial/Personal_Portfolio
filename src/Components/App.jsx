@@ -2,7 +2,7 @@ import Header from "./Header";
 
 export default function App() {
   return (
-    <div>
+    <div className="min-h-screen bg-background">
       <Header />
     </div>
   );
