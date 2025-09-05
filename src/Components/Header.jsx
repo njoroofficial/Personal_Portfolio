@@ -6,7 +6,7 @@ export default function Header() {
       <div className="container px-4 py-4 mx-auto">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold text-primary">Moses Njoroge</div>
-          <nav className="md:flex items-center text-primary gap-8">
+          <nav className="flex items-center text-primary gap-8">
             <button className="text-muted-foreground hover:text-primary transition-colors">
               Home
             </button>
