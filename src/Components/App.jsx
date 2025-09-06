@@ -1,3 +1,4 @@
+import About from "./About";
 import Header from "./Header";
 import Hero from "./Hero";
 
@@ -7,6 +8,7 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <About />
       </main>
     </div>
   );
