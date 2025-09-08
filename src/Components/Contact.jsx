@@ -10,7 +10,7 @@ export default function Contact() {
       <div className="container mx-auto px-4">
         {/* Contact section welcome text */}
         <div className="text-center mb-16">
-          <h2 className="font-bold text-3xl md:text-4xl mb-4">About Me</h2>
+          <h2 className="font-bold text-3xl md:text-4xl mb-4">Get In Touch</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             I'm always open to discussing new opportunities, collaborations, or
             just having a chat about technology
