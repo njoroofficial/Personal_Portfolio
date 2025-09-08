@@ -1,13 +1,13 @@
 # Moses Njoroge - Professional Portfolio Website
 
-A modern, responsive portfolio website showcasing the professional background, skills, and projects of Moses Njoroge, an aspiring Computer Scientist specializing in blockchain, cybersecurity, and data science.
+A modern, responsive portfolio website showcasing the professional background, skills, and projects of Moses Njoroge, an aspiring Computer Scientist specializing in software engineering and data science.
 
 ### Core Sections
 
 - **Hero Section** - Professional introduction with career objectives and contact information
 - **About Section** - Comprehensive CV with education, certifications, and professional affiliations
-- **Skills Section** - Interactive skill visualization across 6 technical categories
-- **Blog Section** - Tech insights and experiences with 6 sample posts
+- **Skills Section** - Interactive skill visualization across various technical categories
+- **Blog Section** - Tech insights and experiences with various sample posts
 - **Contact Section** - Contact form and multiple ways to get in touch
 
 ## 🚀 Tech Stack
