@@ -37,11 +37,18 @@ export default function Hero() {
               <Mail className="mr-2 h-4 w-4" />
               Get In Touch
             </Button>
-            <Button variant="outline">
-              <Github className="mr-2 h-4 w-4" /> GitHub
+            <Button variant="outline" asChild>
+              <a href="https://github.com/njoroofficial" target="_blank">
+                <Github className="mr-2 h-4 w-4" /> GitHub
+              </a>
             </Button>
-            <Button variant="outline">
-              <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
+            <Button variant="outline" asChild>
+              <a
+                href="https://www.linkedin.com/in/moses-njoroge-44b465247"
+                target="_blank"
+              >
+                <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
+              </a>
             </Button>
           </div>
         </div>
