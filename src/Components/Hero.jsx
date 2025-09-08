@@ -9,7 +9,7 @@ export default function Hero() {
           <div className="mb-8">
             {/* My Image */}
             <img
-              src="./src/assets/myself.jpg"
+              src="././assets/myself.jpg"
               alt="Moses Image"
               className="w-48 h-48 rounded-full mx-auto mb-8 object-cover border-4 border-primary/20"
             />

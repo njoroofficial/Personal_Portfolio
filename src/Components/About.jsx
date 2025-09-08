@@ -36,7 +36,7 @@ export default function About() {
           </div>
           <div>
             <img
-              src="./src/assets/modern-tech-workspace.png"
+              src="././assets/modern-tech-workspace.png"
               alt="Tech workspace"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
