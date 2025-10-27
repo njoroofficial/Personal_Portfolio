@@ -24,14 +24,14 @@ export default function Hero() {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Aspiring Computer Scientist | Tech Enthusiast
+            Junior Software Developer | Tech Enthusiast
           </p>
 
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
             Dedicated Computer Science undergraduate with expertise in
-            cybersecurity, data science, and full-stack development. Passionate
-            about Web3, blockchain, and leveraging technology to solve
-            real-world problems.
+            cybersecurity analysis, data science, and software engineering.
+            Passionate about Web3, blockchain, and leveraging technology to
+            solve real-world problems.
           </p>
 
           {/* Communication buttons */}
