@@ -135,105 +135,107 @@ export default function Contact() {
             </div>
           </div>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Send Me a Message</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
+          <div id="getInTouch">
+            <Card>
+              <CardHeader>
+                <CardTitle>Send Me a Message</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium mb-2"
+                      >
+                        Name
+                      </label>
+                      <Input
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        placeholder="Your name"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium mb-2"
+                      >
+                        Email
+                      </label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        placeholder="your.email@example.com"
+                      />
+                    </div>
+                  </div>
+
                   <div>
                     <label
-                      htmlFor="name"
+                      htmlFor="subject"
                       className="block text-sm font-medium mb-2"
                     >
-                      Name
+                      Subject
                     </label>
                     <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
                       onChange={handleChange}
                       required
-                      placeholder="Your name"
+                      placeholder="What's this about?"
                     />
                   </div>
+
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="message"
                       className="block text-sm font-medium mb-2"
                     >
-                      Email
+                      Message
                     </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
                       onChange={handleChange}
                       required
-                      placeholder="your.email@example.com"
+                      rows={5}
+                      placeholder="Tell me about your project or just say hello!"
                     />
                   </div>
-                </div>
 
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-medium mb-2"
+                  {submitStatus === "success" && (
+                    <div className="p-4 bg-green-100 text-green-700 rounded-lg">
+                      Message sent successfully!
+                    </div>
+                  )}
+                  {submitStatus === "error" && (
+                    <div className="p-4 bg-red-100 text-red-700 rounded-lg">
+                      Failed to send message. Please try again.
+                    </div>
+                  )}
+
+                  <Button
+                    type="submit"
+                    className="w-full"
+                    disabled={isSubmitting}
                   >
-                    Subject
-                  </label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    placeholder="What's this about?"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium mb-2"
-                  >
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    placeholder="Tell me about your project or just say hello!"
-                  />
-                </div>
-
-                {submitStatus === "success" && (
-                  <div className="p-4 bg-green-100 text-green-700 rounded-lg">
-                    Message sent successfully!
-                  </div>
-                )}
-                {submitStatus === "error" && (
-                  <div className="p-4 bg-red-100 text-red-700 rounded-lg">
-                    Failed to send message. Please try again.
-                  </div>
-                )}
-
-                <Button
-                  type="submit"
-                  className="w-full"
-                  disabled={isSubmitting}
-                >
-                  <Send className="mr-2 h-4 w-4" />
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+                    <Send className="mr-2 h-4 w-4" />
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>

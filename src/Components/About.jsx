@@ -5,7 +5,7 @@ import { Award, GraduationCap, User } from "lucide-react";
 
 export default function About() {
   return (
-    <section className="py-20 bg-muted/50">
+    <section id="about" className="py-20 bg-muted/50">
       <div className="container mx-auto px-4">
         {/* Welcome About Section Text */}
         <div className="text-center mb-16">
@@ -44,7 +44,7 @@ export default function About() {
         </div>
 
         {/* Qualifications section */}
-        <div className="grid gap-8 md:grid-cols-3">
+        <div id="skills" className="grid gap-8 md:grid-cols-3">
           {/* Education qualification card */}
           <Card>
             <CardHeader>

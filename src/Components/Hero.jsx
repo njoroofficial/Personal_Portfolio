@@ -3,7 +3,10 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center pt-20"
+    >
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
@@ -33,9 +36,11 @@ export default function Hero() {
 
           {/* Communication buttons */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Button>
-              <Mail className="mr-2 h-4 w-4" />
-              Get In Touch
+            <Button asChild>
+              <a href="#getInTouch">
+                <Mail className="mr-2 h-4 w-4" />
+                Get In Touch
+              </a>
             </Button>
             <Button variant="outline" asChild>
               <a href="https://github.com/njoroofficial" target="_blank">
