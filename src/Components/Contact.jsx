@@ -36,6 +36,7 @@ export default function Contact() {
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
+          reply_to: formData.email,
         },
         PUBLIC_KEY
       );
