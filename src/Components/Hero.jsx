@@ -28,10 +28,12 @@ export default function Hero() {
           </p>
 
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Dedicated Computer Science undergraduate with expertise in
-            cybersecurity analysis, data science, and software engineering.
-            Passionate about Web3, blockchain, and leveraging technology to
-            solve real-world problems.
+            Junior Software Engineer with hands-on experience building scalable
+            web applications using React, Next.js, FastAPI, and Supabase.
+            Combines strong foundations in data science and cybersecurity with
+            practical networking knowledge. Passionate about backend
+            optimization, system reliability, and delivering user-centric
+            solutions.
           </p>
 
           {/* Communication buttons */}

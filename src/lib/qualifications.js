@@ -2,7 +2,7 @@ const educations = [
   {
     title: "Bachelor of Science in Computer Science",
     institute: "Kenyatta University",
-    year: "2021 - 2025 (Expected Graduation)",
+    year: "2021 - 2025",
   },
   {
     title: "Kenya Certificate of Secondary Education",

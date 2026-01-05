@@ -23,10 +23,11 @@ export default function About() {
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-6">
               Dedicated Computer Science undergraduate with expertise in
-              cybersecurity analysis, data science, and software engineering.
+              software engineering, cybersecurity analysis and data science,.
               Certified by Google and IBM in critical tech domains, and actively
-              engaged with IEEE communities. Passionate about Web3, blockchain,
-              and leveraging technology to solve real-world problems.
+              engaged with IEEE communities.Passionate about backend
+              optimization, system reliability, and delivering user-centric
+              solutions.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Strong foundation in programming, networking, and data analysis,
