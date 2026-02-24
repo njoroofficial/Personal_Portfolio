@@ -62,27 +62,34 @@ Multiple communication channels including:
 
 </div>
 
-## � Project Structure
+## 📁 Project Structure
 
 ```
-moses-portfolio/
+Personal_Portfolio/
 ├── public/
-│   ├── assets/          # Static assets and images
-│   └── vite.svg         # Vite logo
+│   └── vite.svg              # Vite logo
 ├── src/
-│   ├── Components/      # React components
-│   │   ├── ui/         # shadcn/ui components
-│   │   ├── Header.jsx  # Navigation header
-│   │   ├── Hero.jsx    # Hero section
-│   │   ├── About.jsx   # About section
-│   │   └── Contact.jsx # Contact and availability hub
-│   ├── lib/            # Utility functions
-│   ├── index.css       # Global styles
-│   └── main.jsx        # Application entry point
-├── components.json     # shadcn/ui configuration
-├── package.json        # Dependencies and scripts
-├── tailwind.config.js  # Tailwind CSS configuration
-└── vite.config.js      # Vite build configuration
+│   ├── Components/           # Main portfolio sections and layout components
+│   │   ├── App.jsx
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   ├── FeaturedProjects.jsx
+│   │   └── Contact.jsx
+│   ├── components/
+│   │   └── ui/               # shadcn/ui component primitives
+│   │       ├── badge.jsx
+│   │       ├── button.jsx
+│   │       ├── card.jsx
+│   │       ├── input.jsx
+│   │       └── textarea.jsx
+│   ├── lib/                  # Utility helpers and data modules
+│   ├── index.css             # Global styles
+│   └── main.jsx              # Application entry point
+├── components.json           # shadcn/ui configuration
+├── package.json              # Dependencies and scripts
+├── tailwind.config.js        # Tailwind CSS configuration
+└── vite.config.js            # Vite build configuration
 ```
 
 ## 📈 Performance & SEO
