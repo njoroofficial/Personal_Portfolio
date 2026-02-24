@@ -42,7 +42,7 @@ Interactive visualization of technical competencies across:
 
 Multiple communication channels including:
 
-- Interactive contact form with EmailJS integration
+- Quick contact actions (email, phone/WhatsApp, and LinkedIn)
 - Direct email and phone contact
 - Social media links
 - Professional networking platforms
@@ -59,7 +59,6 @@ Multiple communication channels including:
 | **Icons**         | ![Lucide](https://img.shields.io/badge/Lucide-F56565?style=flat&logo=lucide&logoColor=white)                                                                                                          |
 | **Build Tool**    | ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)                                                                                                                |
 | **Deployment**    | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)                                                                                                          |
-| **Email Service** | ![EmailJS](https://img.shields.io/badge/EmailJS-FF6B6B?style=flat&logo=emailjs&logoColor=white)                                                                                                       |
 
 </div>
 
@@ -76,7 +75,7 @@ moses-portfolio/
 │   │   ├── Header.jsx  # Navigation header
 │   │   ├── Hero.jsx    # Hero section
 │   │   ├── About.jsx   # About section
-│   │   └── Contact.jsx # Contact form
+│   │   └── Contact.jsx # Contact and availability hub
 │   ├── lib/            # Utility functions
 │   ├── index.css       # Global styles
 │   └── main.jsx        # Application entry point

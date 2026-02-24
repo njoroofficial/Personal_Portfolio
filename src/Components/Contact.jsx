@@ -1,80 +1,35 @@
 "use client";
 
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Github,
+  Linkedin,
+  Calendar,
+  MessageCircle,
+} from "lucide-react";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
-
-  const SERVICE_ID = "service_eqs914o";
-  const TEMPLATE_ID = "template_fpfg7tl";
-  const PUBLIC_KEY = "v8pA_DkmPyxjPG5T0";
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-
-    try {
-      await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          reply_to: formData.email,
-        },
-        PUBLIC_KEY
-      );
-
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (error) {
-      console.error("Failed to send email:", error);
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
   return (
     <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I'm always open to discussing new opportunities, collaborations, or
-            just having a chat about technology
+            I&apos;m always open to discussing new opportunities,
+            collaborations, or just having a chat about technology.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
+            <h3 className="text-2xl font-semibold mb-6">Let&apos;s Connect</h3>
             <p className="text-muted-foreground mb-8">
-              Whether you're looking for a developer, have a project in mind, or
-              just want to connect, I'd love to hear from you. Feel free to
+              Whether you&apos;re looking for a developer, have a project in mind,
+              or just want to connect, I&apos;d love to hear from you. Feel free to
               reach out through any of the channels below.
             </p>
 
@@ -124,7 +79,7 @@ export default function Contact() {
                 </Button>
                 <Button variant="outline" size="icon" asChild>
                   <a
-                    href="https://www.linkedin.com/in/moses-njoroge-44b465247"
+                    href="https://www.linkedin.com/in/moses-njoroge-44b465247/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -138,101 +93,65 @@ export default function Contact() {
           <div id="getInTouch">
             <Card>
               <CardHeader>
-                <CardTitle>Send Me a Message</CardTitle>
+                <CardTitle>Ways to Reach Me</CardTitle>
               </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label
-                        htmlFor="name"
-                        className="block text-sm font-medium mb-2"
-                      >
-                        Name
-                      </label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium mb-2"
-                      >
-                        Email
-                      </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="your.email@example.com"
-                      />
-                    </div>
-                  </div>
-
+              <CardContent className="space-y-4">
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=mosesn579@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 rounded-lg border p-4 transition-colors hover:bg-muted"
+                >
+                  <Mail className="h-5 w-5 mt-1 text-primary" />
                   <div>
-                    <label
-                      htmlFor="subject"
-                      className="block text-sm font-medium mb-2"
-                    >
-                      Subject
-                    </label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                      placeholder="What's this about?"
-                    />
+                    <p className="font-medium">Email me directly</p>
+                    <p className="text-sm text-muted-foreground">
+                      Best for project details, collaboration ideas, and formal
+                      opportunities.
+                    </p>
                   </div>
+                </a>
 
+                <a
+                  href="https://wa.me/254704125004"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 rounded-lg border p-4 transition-colors hover:bg-muted"
+                >
+                  <Phone className="h-5 w-5 mt-1 text-primary" />
                   <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium mb-2"
-                    >
-                      Message
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={5}
-                      placeholder="Tell me about your project or just say hello!"
-                    />
+                    <p className="font-medium">Call or WhatsApp</p>
+                    <p className="text-sm text-muted-foreground">
+                      Ideal for quick chats and urgent conversations.
+                    </p>
                   </div>
+                </a>
 
-                  {submitStatus === "success" && (
-                    <div className="p-4 bg-green-100 text-green-700 rounded-lg">
-                      Message sent successfully!
-                    </div>
-                  )}
-                  {submitStatus === "error" && (
-                    <div className="p-4 bg-red-100 text-red-700 rounded-lg">
-                      Failed to send message. Please try again.
-                    </div>
-                  )}
+                <a
+                  href="https://www.linkedin.com/in/moses-njoroge-44b465247/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 rounded-lg border p-4 transition-colors hover:bg-muted"
+                >
+                  <MessageCircle className="h-5 w-5 mt-1 text-primary" />
+                  <div>
+                    <p className="font-medium">Message me on LinkedIn</p>
+                    <p className="text-sm text-muted-foreground">
+                      Great for networking and professional introductions.
+                    </p>
+                  </div>
+                </a>
 
-                  <Button
-                    type="submit"
-                    className="w-full"
-                    disabled={isSubmitting}
-                  >
-                    <Send className="mr-2 h-4 w-4" />
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                  </Button>
-                </form>
+                <div className="rounded-lg bg-primary/10 p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Calendar className="h-5 w-5 text-primary" />
+                    <p className="font-semibold">Current availability</p>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Open to internships, freelance work, and software engineering
+                    opportunities.
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
