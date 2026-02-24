@@ -10,15 +10,13 @@ export default function Hero() {
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
-            {/* My Image */}
             <img
               src="././assets/myself.jpg"
-              alt="Moses Image"
+              alt="Moses Njoroge, junior software developer and computer science undergraduate"
               className="w-48 h-48 rounded-full mx-auto mb-8 object-cover border-4 border-primary/20"
             />
           </div>
 
-          {/* Welcome text */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6 ">
             Moses Njoroge Wairimu
           </h1>
@@ -36,7 +34,6 @@ export default function Hero() {
             solutions.
           </p>
 
-          {/* Communication buttons */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button asChild>
               <a href="#getInTouch">
@@ -45,7 +42,11 @@ export default function Hero() {
               </a>
             </Button>
             <Button variant="outline" asChild>
-              <a href="https://github.com/njoroofficial" target="_blank">
+              <a
+                href="https://github.com/njoroofficial"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Github className="mr-2 h-4 w-4" /> GitHub
               </a>
             </Button>
@@ -53,6 +54,7 @@ export default function Hero() {
               <a
                 href="https://www.linkedin.com/in/moses-njoroge-44b465247"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
               </a>

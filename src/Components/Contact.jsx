@@ -73,6 +73,7 @@ export default function Contact() {
                     href="https://github.com/njoroofficial"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Open Moses Njoroge GitHub profile"
                   >
                     <Github className="h-5 w-5" />
                   </a>
@@ -82,6 +83,7 @@ export default function Contact() {
                     href="https://www.linkedin.com/in/moses-njoroge-44b465247/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Open Moses Njoroge LinkedIn profile"
                   >
                     <Linkedin className="h-5 w-5" />
                   </a>

@@ -1,52 +1,46 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import educations, { proffesionals } from "@/lib/qualifications";
+import educations, { professionals } from "@/lib/qualifications";
 import { Award, GraduationCap, User } from "lucide-react";
 
 export default function About() {
   return (
     <section id="about" className="py-20 bg-muted/50">
       <div className="container mx-auto px-4">
-        {/* Welcome About Section Text */}
         <div className="text-center mb-16">
           <h2 className="font-bold text-3xl md:text-4xl mb-4">About Me</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Learn more about my educational background, certifications, and
-            professional journey
+            professional journey.
           </p>
         </div>
-        {/* About section summary */}
+
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div>
-            <h3 className="font-semibold text-2xl mb-6">
-              Professional Summary
-            </h3>
+            <h3 className="font-semibold text-2xl mb-6">Professional Summary</h3>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Dedicated Computer Science undergraduate with expertise in
-              software engineering, cybersecurity analysis and data science,.
-              Certified by Google and IBM in critical tech domains, and actively
-              engaged with IEEE communities.Passionate about backend
-              optimization, system reliability, and delivering user-centric
-              solutions.
+              Dedicated Computer Science undergraduate with expertise in software
+              engineering, cybersecurity analysis, and data science. Certified by
+              Google and IBM in critical tech domains, and actively engaged with
+              IEEE communities. Passionate about backend optimization, system
+              reliability, and delivering user-centric solutions.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Strong foundation in programming, networking, and data analysis,
-              coupled with a commitment to continuous learning and staying at
-              the forefront of technological advancement.
+              coupled with a commitment to continuous learning and staying at the
+              forefront of technological advancement.
             </p>
           </div>
           <div>
             <img
               src="././assets/modern-tech-workspace.png"
-              alt="Tech workspace"
+              alt="Modern development workspace representing backend engineering and system design work"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
           </div>
         </div>
 
-        {/* Qualifications section */}
-        <div id="skills" className="grid gap-8 md:grid-cols-3">
-          {/* Education qualification card */}
+        <div id="qualifications" className="grid gap-8 md:grid-cols-3">
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center">
@@ -55,23 +49,18 @@ export default function About() {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              {educations.map((education) => {
-                return (
-                  <div>
-                    <h4 className="font-semibold">{education.title}</h4>
-                    <p className="text-sm text-muted-foreground">
-                      {education.institute}
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      {education.year}
-                    </p>
-                  </div>
-                );
-              })}
+              {educations.map((education) => (
+                <div key={`${education.title}-${education.year}`}>
+                  <h4 className="font-semibold">{education.title}</h4>
+                  <p className="text-sm text-muted-foreground">
+                    {education.institute}
+                  </p>
+                  <p className="text-sm text-muted-foreground">{education.year}</p>
+                </div>
+              ))}
             </CardContent>
           </Card>
 
-          {/* Certification Card */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center">
@@ -97,9 +86,7 @@ export default function About() {
                   IBM Certified
                 </Badge>
                 <h4 className="font-semibold">Data Science Practitioner</h4>
-                <p className="text-sm text-muted-foreground">
-                  Issued: Dec 2023
-                </p>
+                <p className="text-sm text-muted-foreground">Issued: Dec 2023</p>
               </div>
               <div>
                 <Badge variant="secondary" className="mb-2">
@@ -111,7 +98,6 @@ export default function About() {
             </CardContent>
           </Card>
 
-          {/* Professional Affiliations Card */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center">
@@ -120,16 +106,12 @@ export default function About() {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              {proffesionals.map((proffesional) => {
-                return (
-                  <div>
-                    <h4 className="font-semibold">{proffesional.title}</h4>
-                    <p className="text-sm text-muted-foreground">
-                      {proffesional.year}
-                    </p>
-                  </div>
-                );
-              })}
+              {professionals.map((professional) => (
+                <div key={`${professional.title}-${professional.year}`}>
+                  <h4 className="font-semibold">{professional.title}</h4>
+                  <p className="text-sm text-muted-foreground">{professional.year}</p>
+                </div>
+              ))}
 
               <div className="pt-4">
                 <Badge variant="outline">IEEE Recognition 2024</Badge>

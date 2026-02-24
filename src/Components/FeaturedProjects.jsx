@@ -110,7 +110,7 @@ export default function FeaturedProjects() {
 
               <CardFooter className="flex gap-3">
                 <Button variant="outline" size="sm" asChild>
-                  <a href={project.github} target="_blank" rel="noreferrer">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github className="h-4 w-4" />
                     GitHub
                   </a>
