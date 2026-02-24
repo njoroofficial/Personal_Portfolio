@@ -15,7 +15,8 @@ const educations = [
     year: "Grade: A- (380 marks)",
   },
 ];
-export const proffesionals = [
+
+export const professionals = [
   {
     title: "IEEE Student Member",
     year: "2024",
@@ -29,4 +30,5 @@ export const proffesionals = [
     year: "2024",
   },
 ];
+
 export default educations;
