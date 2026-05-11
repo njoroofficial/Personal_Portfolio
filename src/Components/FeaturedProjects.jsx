@@ -12,6 +12,26 @@ import { Github } from "lucide-react";
 
 const projects = [
   {
+    name: "Farmart",
+    problem:
+      "Full-stack e-commerce marketplace connecting Kenyan farmers directly with buyers for purchasing farm animals, handling the full lifecycle from listing to payment.",
+    stack: [
+      "React",
+      "TypeScript",
+      "Flask",
+      "PostgreSQL",
+      "Supabase",
+      "Cloudinary",
+      "TailwindCSS",
+    ],
+    outcomes: [
+      "Atomic checkout with price snapshot pattern preventing order discrepancies",
+      "Role-based access control for farmers, buyers, and admins with JWT auth",
+      "Cloudinary image CDN with compensation logic to prevent orphaned uploads",
+    ],
+    github: "https://github.com/njoroofficial/farmart",
+  },
+  {
     name: "Permits Check Platform",
     problem:
       "Digitizing inefficient government permit workflows into a secure, role-based online system.",
@@ -34,7 +54,13 @@ const projects = [
     name: "Neighborly",
     problem:
       "Connecting neighbors in real-time to strengthen hyperlocal community collaboration.",
-    stack: ["Next.js", "React", "Leaflet / Maps", "Realtime updates", "REST APIs"],
+    stack: [
+      "Next.js",
+      "React",
+      "Leaflet / Maps",
+      "Realtime updates",
+      "REST APIs",
+    ],
     outcomes: [
       "Implemented real-time help-request updates",
       "Optimized map rendering performance for dynamic markers",
@@ -54,18 +80,6 @@ const projects = [
     ],
     github: "https://github.com/njoroofficial/Local_Encryption_System",
   },
-  {
-    name: "Dev Event",
-    problem:
-      "Streamlining developer event organization, registration, and attendee engagement.",
-    stack: ["Next.js", "React", "TailwindCSS", "API Routes", "Authentication"],
-    outcomes: [
-      "Modular event creation & registration flow",
-      "Optimized dynamic routing for event detail pages",
-      "Built reusable UI system for scalable event listings",
-    ],
-    github: "https://github.com/njoroofficial/Dev-event",
-  },
 ];
 
 export default function FeaturedProjects() {
@@ -73,11 +87,13 @@ export default function FeaturedProjects() {
     <section id="featured-projects" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Featured Projects
+          </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto">
             A selection of production-grade applications solving real-world
             problems in government digitization, community systems, security
-            engineering, and developer tooling.
+            engineering, and agricultural e-commerce.
           </p>
         </div>
 
@@ -110,12 +126,15 @@ export default function FeaturedProjects() {
 
               <CardFooter className="flex gap-3">
                 <Button variant="outline" size="sm" asChild>
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Github className="h-4 w-4" />
                     GitHub
                   </a>
                 </Button>
-
               </CardFooter>
             </Card>
           ))}
